@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>REFLECT: Summarizing Robot
+			Experiences for FaiLure Explanation and CorrecTion</title>
+		<meta charset="utf-8" />
+		 <meta name="viewport" content="width=1000">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CS6W55NS8E"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-CS6W55NS8E');
+		</script>
+
+	    <meta property="og:type"          content="website" />
+	    <meta property="og:title"         content="REFLECT: Summarizing Robot
+		Experiences for FaiLure Explanation and CorrecTion" />
+	    
+
+	</head>
+	<body id="top">
+
+
+		<!-- Main -->
+			<div id="main" style="padding-bottom:1em; padding-top: 5em; width: 70em; max-width: 70em; margin-left: auto; margin-right: auto;">
+					<section id="four">
+
+						<h1 style="text-align: center; margin-bottom: 0; color: #4e79a7; font-size: 180%; margin-bottom: 1em;">REFLECT: Summarizing Robot
+							Experiences for FaiLure Explanation and CorrecTion</h1>
+                        
+                        <p style="text-align: justify;">
+                            The ability to analyze failed executions and self-recover from failure is crucial for an explainable and robust robotics system. Large Language Models (LLMs) have recently demonstrated strong common sense reasoning skills on textual inputs. To leverage the power of LLM for robot failure analysis, we propose a framework REFLECT, which converts multi-sensory data into a hierarchical summary of robot past experiences and queries LLM with a progressive failure analysis algorithm. Finally, conditioned on the explanation, a language planner generates a feasible plan for the robot to recover from failure and complete the task. To systematically evaluate the framework, we create the RoboFail dataset and show that our method is able to generate informative failure explanations that can assist in successful correction planning. The dataset and code will be publicly available.
+						</p>
+
+						<hr>
+
+						<u><h1 style="color:black;">Real World Results</h1></u>
+						<!-- <p>
+							
+						</p> -->
+						<h2 style="color:black;">Task: Boil water in a pot</h2>
+
+						<!-- <div id="two_obj" style="display:flex;margin-bottom:50px;height:250px"></div> -->
+						<div style="text-align: center; justify-content: center; display: flex; margin-bottom: 20px;">
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Execution (video has sound)</p>
+								<!-- <h2>Execution</h2> -->
+								<video controls autoplay muted loop style="width: 100%"><source src="videos/boilWater1.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+								<p style="margin-bottom: 1pt; text-align:justify;">The robot failed because it <span style="color:red">placed the bowl on the stove burner instead of the pot filled with water</span>, and it didn't move the pot from the sink to the stove burner.</p>
+							</div>
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Execution (video has sound)</p>
+								<video controls autoplay loop style="width: 100%"><source src="videos/boilWater4.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+									<p style="margin-bottom: 1pt; text-align:justify;">At 03:00, the robot failed to properly place the pot filled with water on the stove burner. The failure was caused by the <span style="color:red">robot dropping something on the ground at 02:43, which might have been the pot or its contents.</span></p>
+							</div>
+						</div>	
+
+						<h2 style="color:black;">Task: Sauté carrot slice in a saucepan</h2>
+
+						<!-- <div id="two_obj" style="display:flex;margin-bottom:50px;height:250px"></div> -->
+						<div style="text-align: center; justify-content: center; display: flex; margin-bottom: 20px;">
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Execution (video has sound)</p>
+								<video controls autoplay loop style="width: 100%"><source src="videos/sauteeCarrot1.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+								<p style="margin-bottom: 1pt; text-align:justify;">At 01:02, the robot <span style="color:red">mistakenly picked up a spoon instead of the intended knife,</span> causing the failure in its task to sauté carrots.</p>
+							</div>
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+							</div>
+						</div>	
+
+						<h2 style="color:black;">Task: Store an apple in the fridge</h2>
+
+						<!-- <div id="two_obj" style="display:flex;margin-bottom:50px;height:250px"></div> -->
+						<div style="text-align: center; justify-content: center; display: flex; margin-bottom: 20px;">
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Execution (video has sound)</p>
+								<video controls autoplay loop style="width: 100%"><source src="videos/appleInFridge4.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+								<p style="margin-bottom: 1pt; text-align: justify;">The robot plan is <span style="color:red">missing the action to close the fridge door</span> after placing the bowl with the apple inside the fridge.</p>
+							</div>
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+							</div>
+
+						</div>	
+						
+						<h2 style="color:black;">Task: Secure pear and knife</h2>
+
+						<!-- <div id="two_obj" style="display:flex;margin-bottom:50px;height:250px"></div> -->
+						<div style="text-align: center; justify-content: center; display: flex; margin-bottom: 20px;">
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Execution (video has sound)</p>
+								<video controls autoplay loop style="width: 100%"><source src="videos/secureObjects1.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+								<p style="margin-bottom: 1pt; text-align: justify;">The robot plan failed because it <span style="color:red">placed the knife in the fridge instead of its most suitable container, and the pear was placed in the drawer rather than the fridge.</span></p>
+							</div>
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+							</div>
+						</div>
+
+						<u><h1 style="color:black;">Simulation Results</h1></u>
+						<h2 style="color:black;">Task: Fry an egg in a pan</h2>
+						<div style="margin-bottom: 5pt; width: 100%; margin-left: 3%; margin-right: 2%; position: relative;">
+							<video controls autoplay loop style="width: 90%"><source src="videos/fryEgg.mov" type="video/mp4"> </video>
+							<p style="margin-bottom: 1pt;"></p>
+						</div>
+						
+					</br></br>
+						<h2 style="color:black;">Task: Close the laptop and put it on the TV stand and switch on television</h2>
+						<div style="margin-bottom: 5pt; width: 100%; margin-left: 3%; margin-right: 2%; position: relative;">
+							<video controls autoplay loop style="width: 90%"><source src="videos/switchDevices.mov" type="video/mp4"> </video>
+							<p style="margin-bottom: 1pt;"></p>
+						</div>
+
+					</section>
+	
+			</div>
+
+			<!-- Scripts -->
+			<script src=" assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+			<script src="assets/js/chartjs-plugin-annotation.min.js"></script>
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/data.js" defer></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
