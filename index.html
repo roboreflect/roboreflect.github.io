@@ -79,7 +79,7 @@
 								<video controls autoplay loop style="width: 100%"><source src="videos/sauteeCarrot3.mov" type="video/mp4"> </video>
 								<p style="margin-bottom: 1pt;"></p>
 								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
-								<p style="margin-bottom: 1pt; text-align:justify;">At 01:02, the robot <span style="color:red">mistakenly picked up a spoon instead of the intended knife,</span> causing the failure in its task to sauté carrots. Failure timestep: 01:02</p>
+								<p style="margin-bottom: 1pt; text-align:justify;">At 01:18, the robot failed to sauté the carrot because it had not successfully sliced the carrot. The failure was caused by the <span style="color:red">robot dropping the knife at 00:55 while attempting to slice the carrot</span>, leaving it with an empty gripper. Failure timesteps: 00:55, 01:18</p>
 							</div>
 						</div>	
 
@@ -95,6 +95,10 @@
 								<p style="margin-bottom: 1pt; text-align: justify;">The robot plan is <span style="color:red">missing the action to close the fridge door</span> after placing the bowl with the apple inside the fridge. Failure timestep: 03:47</p>
 							</div>
 							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<video controls autoplay loop style="width: 100%"><source src="videos/appleInFridge2.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+								<p style="margin-bottom: 1pt; text-align: justify;">At 04:13, the robot failed to properly store the apple in the bowl inside the fridge. The failure was caused by the robot <span style="color:red">placing the white bowl with the apple on top of the fridge instead of inside it.</span> Failure timestep: 04:13</p>
 							</div>
 
 						</div>	
