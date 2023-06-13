@@ -39,6 +39,7 @@
 						<hr>
 
 						<u><h1 style="color:black;">Real World Results</h1></u>
+						<!-- Consists of the original execution, the failure explanation and localization. -->
 						<!-- <p>
 							
 						</p> -->
@@ -75,6 +76,10 @@
 								<p style="margin-bottom: 1pt; text-align:justify;">At 01:02, the robot <span style="color:red">mistakenly picked up a spoon instead of the intended knife,</span> causing the failure in its task to sauté carrots. Failure timestep: 01:02</p>
 							</div>
 							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<video controls autoplay loop style="width: 100%"><source src="videos/sauteeCarrot3.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+								<p style="margin-bottom: 1pt; text-align:justify;">At 01:02, the robot <span style="color:red">mistakenly picked up a spoon instead of the intended knife,</span> causing the failure in its task to sauté carrots. Failure timestep: 01:02</p>
 							</div>
 						</div>	
 
@@ -93,23 +98,48 @@
 							</div>
 
 						</div>	
-						
-						<h2 style="color:black;">Task: Secure pear and knife (video has sound)</h2>
 
 						<!-- <div id="two_obj" style="display:flex;margin-bottom:50px;height:250px"></div> -->
 						<div style="text-align: center; justify-content: center; display: flex; margin-bottom: 20px;">
 							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
 								<!-- <p style="margin-bottom: 0pt; font-size: 1.5em">Execution</p> -->
+								<h2 style="color:black; text-align:left;">Task: Secure pear and knife</h2>
 								<video controls autoplay loop style="width: 100%"><source src="videos/secureObjects1.mov" type="video/mp4"> </video>
 								<p style="margin-bottom: 1pt;"></p>
 								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
 								<p style="margin-bottom: 1pt; text-align: justify;">The robot plan failed because it <span style="color:red">placed the knife in the fridge instead of its most suitable container, and the pear was placed in the drawer rather than the fridge.</span> Failure timestep: 02:15</p>
 							</div>
 							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<h2 style="color:black; text-align:left;">Task: Serve microwaved potato</h2>
+								<video controls autoplay loop style="width: 100%"><source src="videos/heatPotato1.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+								<p style="margin-bottom: 1pt; text-align: justify;">At 05:24, the robot <span style="color:red">failed to close the microwave door before toggling it on</span>, causing the failure. Failure step: 05:24</p>
+
+							</div>
+						</div>
+
+						<div style="text-align: center; justify-content: center; display: flex; margin-bottom: 20px;">
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<!-- <p style="margin-bottom: 0pt; font-size: 1.5em">Execution</p> -->
+								<h2 style="color:black; text-align:left;">Task: Serve coffee on table</h2>
+								<video controls autoplay loop style="width: 100%"><source src="videos/makeCoffee3.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+								<p style="margin-bottom: 1pt; text-align: justify;">At 02:27, the robot failed to make coffee because it <span style="color:red">picked up the pink cup instead of the blue cup that was inside the coffee machine</span> (observed at 02:04). This led to the robot placing the wrong cup (pink cup) on the table, leaving the blue cup with coffee still inside the machine. Failure timesteps: 02:04 & 02:27</p>
+							</div>
+							<div style="margin-bottom: 5pt; width: 46%; margin-left: 3%; margin-right: 2%; position: relative;">
+								<h2 style="color:black; text-align:left;">Task: Put apple in a bowl</h2>
+								<video controls autoplay loop style="width: 100%"><source src="videos/putAppleBowl3.mov" type="video/mp4"> </video>
+								<p style="margin-bottom: 1pt;"></p>
+								<p style="margin-bottom: 0pt; font-size: 1.5em">Failure Explanation</p>
+								<p style="margin-bottom: 1pt; text-align: justify;">At 01:06, the failure occurred because the robot placed the apple on top of the bowl instead of inside it. This was likely caused by the <span style="color:red">presence of the knife on top of the bowl, obstructing the apple from being placed correctly.</span> Failure timestep: 01:06</p>
+
 							</div>
 						</div>
 
 						<u><h1 style="color:black;">Simulation Results</h1></u>
+						<!-- <p>Consists of the original execution, the failure explanation, failure localization and failure correction.</p> -->
 						<h2 style="color:black;">Task: Serve coffee in a mug</h2>
 						<div style="margin-bottom: 5pt; width: 100%; margin-left: 3%; margin-right: 2%; position: relative;">
 							<video controls autoplay loop style="width: 90%"><source src="videos/makeCoffee.mp4" type="video/mp4"> </video>
